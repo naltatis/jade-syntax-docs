@@ -1,4 +1,4 @@
-jade-syntax-documentation
-=========================
+# Jade Template Syntax by Example
+http://naltatis.github.com/jade-syntax-docs/
 
-jade template syntax by example
+For more details see the [original documentation.](https://github.com/visionmedia/jade)
