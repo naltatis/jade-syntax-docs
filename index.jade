@@ -185,14 +185,14 @@ html
             textarea.size1.jade.
               input(type=type, value="Hello \#{name}")
             textarea.size1.json.
-              { "type": "text", "name": "Bob" }
+              {"type": "text", "name": "Bob"}
           .span6.right
             textarea.size3.html(readonly=true)
         hr
         .row
           .span6
             textarea.size1.jade.
-              input(selected=true, disabled=false)
+              input(checked=true, disabled=false)
           .span6.right
             textarea.size1.html(readonly=true)
       section#comments
@@ -234,7 +234,7 @@ html
               else
                 h1 My name is \#{name}
             textarea.size1.json.
-              { "name": "Bob" }
+              {"name": "Bob"}
           .span6.right
             textarea.size6.html(readonly=true)
         hr
@@ -244,7 +244,7 @@ html
               unless errors
                 p no errors
             textarea.size1.json.
-              { "errors": false }
+              {"errors": false}
           .span6.right
             textarea.size4.html(readonly=true)
       section#for
@@ -257,7 +257,7 @@ html
                 each book, i in books
                   option(value=i) Book \#{book}
             textarea.size1.json.
-              { "books": ["A", "B", "C"] }
+              {"books": ["A", "B", "C"]}
           .span6.right
             textarea.size5.html(readonly=true)
       section#case
@@ -274,7 +274,7 @@ html
                 default
                   p Hello \#{name}!
             textarea.size1.json.
-              { "name": "Bob" }
+              {"name": "Bob"}
           .span6.right
             textarea.size9.html(readonly=true)
 
