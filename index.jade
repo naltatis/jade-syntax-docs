@@ -260,6 +260,19 @@ html
               {"books": ["A", "B", "C"]}
           .span6.right
             textarea.size5.html(readonly=true)
+        hr
+        .row
+          .span6
+            textarea.size5.jade.
+              ul
+                for book in books
+                  li= book
+                else
+                  li sorry, no books!
+            textarea.size1.json.
+              {"books": []}
+          .span6.right
+            textarea.size7.html(readonly=true)
       section#case
         .page-header
           h2 case
@@ -288,8 +301,20 @@ html
                 li \#{name} for \#{price} &euro;
 
               ul#books
-                mixin book("Book A", 12.99)
-                mixin book("Book B", 5.99)
+                +book("Book A", 12.99)
+                +book("Book B", 5.99)
+          .span6.right
+            textarea.size6.html(readonly=true)
+        hr
+        .row
+          .span6
+            textarea.size6.jade.
+              mixin book(name, price)
+                div(attributes)= name
+
+              +book("Book A")#first
+              +book("Book B")(title="book b")
+              +book("Book C").last
           .span6.right
             textarea.size6.html(readonly=true)
               

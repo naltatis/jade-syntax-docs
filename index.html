@@ -33,7 +33,11 @@ else
   h1 My name is #{name}</textarea><textarea class="size1 json">{"name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size6 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">unless errors
   p no errors</textarea><textarea class="size1 json">{"errors": false}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="for"><div class="page-header"><h2>for &amp; each</h2></div><div class="row"><div class="span6"><textarea class="size3 jade">select
   each book, i in books
-    option(value=i) Book #{book}</textarea><textarea class="size1 json">{"books": ["A", "B", "C"]}</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div></section><section id="case"><div class="page-header"><h2>case</h2></div><div class="row"><div class="span6"><textarea class="size7 jade">case name
+    option(value=i) Book #{book}</textarea><textarea class="size1 json">{"books": ["A", "B", "C"]}</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size5 jade">ul
+  for book in books
+    li= book
+  else
+    li sorry, no books!</textarea><textarea class="size1 json">{"books": []}</textarea></div><div class="span6 right"><textarea readonly class="size7 html"></textarea></div></div></section><section id="case"><div class="page-header"><h2>case</h2></div><div class="row"><div class="span6"><textarea class="size7 jade">case name
   when "Bob"
     p Hi Bob!
   when "Alice"
@@ -43,8 +47,13 @@ else
   li #{name} for #{price} &euro;
   
 ul#books
-  mixin book("Book A", 12.99)
-  mixin book("Book B", 5.99)</textarea></div><div class="span6 right"><textarea readonly class="size6 html"></textarea></div></div></section></div><script type="text/javascript">var _gaq = _gaq || [];
+  +book("Book A", 12.99)
+  +book("Book B", 5.99)</textarea></div><div class="span6 right"><textarea readonly class="size6 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size6 jade">mixin book(name, price)
+  div(attributes)= name
+  
++book("Book A")#first
++book("Book B")(title="book b")
++book("Book C").last</textarea></div><div class="span6 right"><textarea readonly class="size6 html"></textarea></div></div></section></div><script type="text/javascript">var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-33399084-1']);
 _gaq.push(['_trackPageview']);
 
