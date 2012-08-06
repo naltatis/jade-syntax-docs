@@ -34,6 +34,7 @@ $ ->
 
   $("#basics .row").addClass "annotate"
 
+  $.fn.tabOverride.autoIndent = true
   $.fn.tabOverride.tabSize(2)
   $("textarea").tabOverride()
 
