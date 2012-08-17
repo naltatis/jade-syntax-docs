@@ -4,7 +4,7 @@ html
   head
     title my jade template
   body
-    h1 Hello \#{name}</textarea><textarea class="size1 json">{"name": "Bob"}</textarea><div class="dataLabel"></div></div><div class="span6 right"><div class="htmlLabel"></div><textarea readonly class="size9 html"></textarea></div></div></section><section id="id-classes"><div class="page-header"><h2>id &amp; classes</h2></div><div class="row"><div class="span6"><textarea class="size5 jade">#content
+    h1 Hello &#35;{name}</textarea><textarea class="size1 json">{"name": "Bob"}</textarea><div class="dataLabel"></div></div><div class="span6 right"><div class="htmlLabel"></div><textarea readonly class="size9 html"></textarea></div></div></section><section id="id-classes"><div class="page-header"><h2>id &amp; classes</h2></div><div class="row"><div class="span6"><textarea class="size5 jade">#content
   .block
     input#bar.foo1.foo2</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div></section><section id="nesting"><div class="page-header"><h2>Nesting</h2></div><div class="row"><div class="span6"><textarea class="size5 jade">ul#books
   li
@@ -14,15 +14,15 @@ html
   li: a(href="#book-a") Book A
   li: a(href="#book-b") Book B</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="text"><div class="page-header"><h2>Text</h2></div><div class="row"><div class="span6"><textarea class="size3 jade">h1 foo
 h2\= book.name
-h3 "\#{book.name}" for \#{book.price} &euro;</textarea><textarea class="size1 json">{"book": {"name": "Hello", "price": 12.99}}</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size4 jade">p
+h3 "&#35;{book.name}" for &#35;{book.price} &euro;</textarea><textarea class="size1 json">{"book": {"name": "Hello", "price": 12.99}}</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size4 jade">p
   | foo bar
   | hello world</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size4 jade">p.
   foo bar
   hello world</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="variables"><div class="page-header"><h2>Variables</h2></div><div class="row"><div class="span6"><textarea class="size2 jade">foo = "hello world"
 h1= foo</textarea></div><div class="span6 right"><textarea readonly class="size2 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">foo = book.name + " world"
 h1= foo</textarea><textarea class="size1 json">{"book": {"name": "hello"}}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="escaping"><div class="page-header"><h2>Escaping</h2></div><div class="row"><div class="span6"><textarea class="size1 jade">li Hello <em>World</em></textarea></div><div class="span6 right"><textarea readonly class="size1 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">li= name
-li!= name</textarea><textarea class="size1 json">{"name": "Hello <em>World</em>"}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">li Say \#{name}
-li Say \!{name}</textarea><textarea class="size1 json">{"name": "Hello <em>World</em>"}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="attributes"><div class="page-header"><h2>Attributes</h2></div><div class="row"><div class="span6"><textarea class="size1 jade">input(type="text", placeholder="your name")</textarea></div><div class="span6 right"><textarea readonly class="size1 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size1 jade">input(type=type, value="Hello \#{name}")</textarea><textarea class="size1 json">{"type": "text", "name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size3 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size1 jade">input(checked=true, disabled=false)</textarea></div><div class="span6 right"><textarea readonly class="size1 html"></textarea></div></div></section><section id="comments"><div class="page-header"><h2>Comments</h2></div><div class="row"><div class="span6"><textarea class="size2 jade">// single line comment
+li!= name</textarea><textarea class="size1 json">{"name": "Hello <em>World</em>"}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">li Say &#35;{name}
+li Say &#33;{name}</textarea><textarea class="size1 json">{"name": "Hello <em>World</em>"}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="attributes"><div class="page-header"><h2>Attributes</h2></div><div class="row"><div class="span6"><textarea class="size1 jade">input(type="text", placeholder="your name")</textarea></div><div class="span6 right"><textarea readonly class="size1 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size1 jade">input(type=type, value='Hello &#35;{name}')</textarea><textarea class="size1 json">{"type": "text", "name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size3 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size1 jade">input(checked=true, disabled=false)</textarea></div><div class="span6 right"><textarea readonly class="size1 html"></textarea></div></div></section><section id="comments"><div class="page-header"><h2>Comments</h2></div><div class="row"><div class="span6"><textarea class="size2 jade">// single line comment
 //- invisible single line comment</textarea></div><div class="span6 right"><textarea readonly class="size2 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size4 jade">// block comment
   h1 hello world
 //- invisible block comment
@@ -30,10 +30,10 @@ li Say \!{name}</textarea><textarea class="size1 json">{"name": "Hello <em>World
   script(src='/ie.js')</textarea></div><div class="span6 right"><textarea readonly class="size2 html"></textarea></div></div></section><section id="if"><div class="page-header"><h2>if &amp; unless</h2></div><div class="row"><div class="span6"><textarea class="size4 jade">if name == "Bob"
   h1 Hello Bob
 else
-  h1 My name is \#{name}</textarea><textarea class="size1 json">{"name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size6 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">unless errors
+  h1 My name is &#35;{name}</textarea><textarea class="size1 json">{"name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size6 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size2 jade">unless errors
   p no errors</textarea><textarea class="size1 json">{"errors": false}</textarea></div><div class="span6 right"><textarea readonly class="size4 html"></textarea></div></div></section><section id="for"><div class="page-header"><h2>for &amp; each</h2></div><div class="row"><div class="span6"><textarea class="size3 jade">select
   each book, i in books
-    option(value=i) Book \#{book}</textarea><textarea class="size1 json">{"books": ["A", "B", "C"]}</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size5 jade">ul
+    option(value=i) Book &#35;{book}</textarea><textarea class="size1 json">{"books": ["A", "B", "C"]}</textarea></div><div class="span6 right"><textarea readonly class="size5 html"></textarea></div></div><hr><div class="row"><div class="span6"><textarea class="size5 jade">ul
   for book in books
     li= book
   else
@@ -43,8 +43,8 @@ else
   when "Alice"
     p Howdy Alice!
   default
-    p Hello \#{name}!</textarea><textarea class="size1 json">{"name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size9 html"></textarea></div></div></section><section id="mixin"><div class="page-header"><h2>mixin</h2></div><div class="row"><div class="span6"><textarea class="size6 jade">mixin book(name, price)
-  li \#{name} for \#{price} &euro;
+    p Hello &#35;{name}!</textarea><textarea class="size1 json">{"name": "Bob"}</textarea></div><div class="span6 right"><textarea readonly class="size9 html"></textarea></div></div></section><section id="mixin"><div class="page-header"><h2>mixin</h2></div><div class="row"><div class="span6"><textarea class="size6 jade">mixin book(name, price)
+  li &#35;{name} for &#35;{price} &euro;
   
 ul#books
   +book("Book A", 12.99)
