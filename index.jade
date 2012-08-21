@@ -45,7 +45,7 @@ html
                 head
                   title my jade template
                 body
-                  h1 Hello \#{name}
+                  h1 Hello &#35;{name}
             textarea.size1.json.
               {"name": "Bob"}
             .dataLabel
@@ -93,7 +93,7 @@ html
             textarea.size3.jade.
               h1 foo
               h2\= book.name
-              h3 "\#{book.name}" for \#{book.price} &euro;
+              h3 "&#35;{book.name}" for &#35;{book.price} &euro;
             textarea.size1.json.
               {"book": {"name": "Hello", "price": 12.99}}
           .span6.right
@@ -160,8 +160,8 @@ html
         .row
           .span6
             textarea.size2.jade.
-              li Say \#{name}
-              li Say \!{name}
+              li Say &#35;{name}
+              li Say &#33;{name}
             textarea.size1.json.
               {"name": "Hello <em>World</em>"}
           .span6.right
@@ -179,7 +179,7 @@ html
         .row
           .span6
             textarea.size1.jade.
-              input(type=type, value="Hello \#{name}")
+              input(type=type, value='Hello &#35;{name}')
             textarea.size1.json.
               {"type": "text", "name": "Bob"}
           .span6.right
@@ -228,7 +228,7 @@ html
               if name == "Bob"
                 h1 Hello Bob
               else
-                h1 My name is \#{name}
+                h1 My name is &#35;{name}
             textarea.size1.json.
               {"name": "Bob"}
           .span6.right
@@ -251,7 +251,7 @@ html
             textarea.size3.jade.
               select
                 each book, i in books
-                  option(value=i) Book \#{book}
+                  option(value=i) Book &#35;{book}
             textarea.size1.json.
               {"books": ["A", "B", "C"]}
           .span6.right
@@ -281,7 +281,7 @@ html
                 when "Alice"
                   p Howdy Alice!
                 default
-                  p Hello \#{name}!
+                  p Hello &#35;{name}!
             textarea.size1.json.
               {"name": "Bob"}
           .span6.right
@@ -294,7 +294,7 @@ html
           .span6
             textarea.size6.jade.
               mixin book(name, price)
-                li \#{name} for \#{price} &euro;
+                li &#35;{name} for &#35;{price} &euro;
 
               ul#books
                 +book("Book A", 12.99)
