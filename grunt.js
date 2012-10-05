@@ -54,11 +54,11 @@ module.exports = function(grunt) {
     },
     server: {},
     watch: {
-      files: ['js/*', 'css/*', 'index.jade'],
+      files: ['js/server.coffee', 'css/*', 'index.jade'],
       tasks: 'compile'
     }
   });
-  
+
   grunt.loadNpmTasks('grunt-contrib');
 
   grunt.registerTask('default', 'compile server watch');

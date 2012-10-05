@@ -1,7 +1,10 @@
-body{padding:60px 0;background:url("../img/furley_bg.png") center}
+body{padding:60px 0 0;background:url("../img/furley_bg.png") center}
 h1{font-weight:500}
 .lead{font-size:17px;}
+.lead strong{font-weight:bold}
 .lead a{color:#333;text-decoration:underline}
+footer{margin-top:20px;padding:10px;text-align:center;background:#f5f5f5;border-top:1px solid #d5d5d5;}
+footer p{display:inline-block;margin:0 20px;vertical-align:top}
 section{padding:50px 0;}
 section#basics{padding-top:20px}
 hr{border-color:#e5e5e5}
