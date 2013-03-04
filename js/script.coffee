@@ -9,7 +9,7 @@ $ ->
     $html = $jade.closest(".row").find("textarea.html")
     $jade.closest(".row").find("textarea").removeClass("error")
     try
-      data = JSON.parse json      
+      data = JSON.parse json
     catch error
       $data.addClass("error")
       $html.val("[json] " + error.message).addClass("error")
@@ -36,7 +36,7 @@ $ ->
 
   $.fn.tabOverride.autoIndent = true
   $.fn.tabOverride.tabSize(2)
-  $("textarea").tabOverride()
+  $("textarea.jade, textarea.json").tabOverride()
 
   navTop = $('.subnav').length && $('.subnav').offset().top
   isFixed = 0

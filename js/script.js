@@ -44,7 +44,7 @@
     $("#basics .row").addClass("annotate");
     $.fn.tabOverride.autoIndent = true;
     $.fn.tabOverride.tabSize(2);
-    $("textarea").tabOverride();
+    $("textarea.jade, textarea.json").tabOverride();
     navTop = $('.subnav').length && $('.subnav').offset().top;
     isFixed = 0;
     return $(window).on("scroll", function() {
