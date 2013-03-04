@@ -10,7 +10,7 @@ section#basics{padding-top:20px}
 hr{border-color:#e5e5e5}
 .right{text-align:right}
 .span6{position:relative}
-.jadeLabel,.dataLabel,.htmlLabel{-webkit-transition:opacity .4s ease-in 1.5s;-moz-transition:opacity .4s ease-in 1.5s;-o-transition:opacity .4s ease-in 1.5s;-ms-transition:opacity .4s ease-in 1.5s;transition:opacity .4s ease-in 1.5s;opacity:0;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);filter:alpha(opacity=0);position:absolute;background-repeat:no-repeat;height:30px}
+.jadeLabel,.dataLabel,.htmlLabel{-webkit-transition:opacity .4s ease-in 1.5s;-moz-transition:opacity .4s ease-in 1.5s;-o-transition:opacity .4s ease-in 1.5s;-ms-transition:opacity .4s ease-in 1.5s;transition:opacity .4s ease-in 1.5s;opacity:0;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";position:absolute;background-repeat:no-repeat;height:30px}
 .row.annotate .jadeLabel,.row.annotate .dataLabel,.row.annotate .htmlLabel{opacity:1;-ms-filter:none;filter:none}
 .jadeLabel{-webkit-transition-delay:1.4s;-moz-transition-delay:1.4s;-o-transition-delay:1.4s;-ms-transition-delay:1.4s;transition-delay:1.4s;right:10%;top:-30px;background-image:url("../img/jade.png");width:132px}
 .dataLabel{-webkit-transition-delay:1.5s;-moz-transition-delay:1.5s;-o-transition-delay:1.5s;-ms-transition-delay:1.5s;transition-delay:1.5s;right:9%;bottom:-32px;background-image:url("../img/data.png");width:130px}
