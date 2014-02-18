@@ -1,0 +1,35 @@
+{
+  "name": "jade-syntax-docs",
+  "version": "0.0.0",
+  "description": "Jade Template Syntax by example",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-coffee": "~0.5.0",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-connect": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-jade": "~0.4.0",
+    "grunt-contrib-stylus": "~0.4.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-watch": "~0.3.1",
+    "nib": "~0.7.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:naltatis/jade-syntax-docs.git"
+  },
+  "keywords": [
+    "jade"
+  ],
+  "author": "naltatis",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/naltatis/jade-syntax-docs/issues"
+  },
+  "homepage": "https://github.com/naltatis/jade-syntax-docs"
+}
