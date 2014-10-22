@@ -218,8 +218,9 @@ html
         .row
           .span6
             textarea.size2.jade.
-              // if lt IE 8
-                script(src='/ie.js')
+              <!--[if lt IE 8]>
+              <script src="/ie.js"></script>
+              <![endif]-->
           .span6.right
             textarea.size2.html(readonly=true)
       section#if
