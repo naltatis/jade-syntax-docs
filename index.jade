@@ -4,10 +4,21 @@ html
     title Jade Template Syntax Documentation by Example
     link(href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Ubuntu:400,700", rel="stylesheet", type="text/css")
     link(href="assets/global.min.css", rel="stylesheet", type="text/css")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
-    script(src="assets/global.min.js")
     meta(name="description", content="An interative Syntax Documentation for the Jade Templating Engine")
     link(rel="author", href="https://plus.google.com/u/0/113306279128990179378")
+    script.
+      WebFontConfig = {
+        google: { families: [ 'Droid+Sans+Mono::latin', 'Ubuntu:400,700:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
   body(data-spy="scroll", data-target=".subnav", data-offset="150")
     a(href="https://github.com/naltatis/jade-syntax-docs")
       img(style="position: absolute; top: 0; right: 0; border: 0;", src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", alt="Fork me on GitHub")
@@ -20,7 +31,7 @@ html
           | This <strong>interactive</strong> documentation illustrates the most important features of the Jade templating language.<br>
           | You can play around with the examples and watch the html output in real time.<br>
           | For more detailed explanations visit the&nbsp;
-          a(href="https://github.com/visionmedia/jade/") official documentation.
+          a(href="http://jade-lang.com/reference/") official documentation.
         .subnav
           ul.nav.nav-pills
             li: a(href="#basics") Basics
@@ -331,6 +342,7 @@ html
           <script id='fb7pp5j'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=tatilans&button=compact&url=https%3A%2F%2Fgithub.com%2Fnaltatis%2Fjade-syntax-docs';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb7pp5j');</script>
         //-(rev="flattr;button:compact", href="https://github.com/naltatis/jade-syntax-docs", lang="de", title="interactive Jade Syntax Documentation");
 
+    script(src="assets/global.min.js", async)
     script(type="text/javascript")
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-33399084-1']);

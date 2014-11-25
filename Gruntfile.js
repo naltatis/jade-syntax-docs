@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['js/jade.js', 'assets/temp/*.js'],
+        src: ['js/jquery.js', 'js/jade.js', 'assets/temp/*.js'],
         dest: 'assets/global.min.js'
       }
     },
