@@ -1,4 +1,4 @@
-!!! 5
+doctype 5
 html
   head
     title Jade Template Syntax Documentation by Example
@@ -43,7 +43,7 @@ html
           .span6
             .jadeLabel
             textarea.size7.jade.
-              !!! 5
+              doctype html
               html
                 head
                   title my jade template
@@ -217,9 +217,10 @@ html
         hr
         .row
           .span6
-            textarea.size2.jade.
-              // if lt IE 8
-                script(src='/ie.js')
+            textarea.size3.jade.
+              <!--[if IE 8]>
+              script(src='/ie.js')
+              <![endif]-->
           .span6.right
             textarea.size2.html(readonly=true)
       section#if
@@ -308,8 +309,8 @@ html
         .row
           .span6
             textarea.size6.jade.
-              mixin book(name, price)
-                div(attributes)= name
+              mixin book(name)
+                div&attributes(attributes)= name
 
               +book("Book A")#first
               +book("Book B")(title="book b")
@@ -326,16 +327,9 @@ html
         |  and&nbsp;
         a(href="https://twitter.com/naltatis", title="naltatis on twitter") twitter
       p
-        a.FlattrButton(rev="flattr;button:compact", href="https://github.com/naltatis/jade-syntax-docs", lang="de", title="interactive Jade Syntax Documentation")
-
-    script
-      (function() {
-          var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-          t.parentNode.insertBefore(s, t);
-      })();
+        a.FlattrButton
+          <script id='fb7pp5j'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=tatilans&button=compact&url=https%3A%2F%2Fgithub.com%2Fnaltatis%2Fjade-syntax-docs';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb7pp5j');</script>
+        //-(rev="flattr;button:compact", href="https://github.com/naltatis/jade-syntax-docs", lang="de", title="interactive Jade Syntax Documentation");
 
     script(type="text/javascript")
       var _gaq = _gaq || [];
