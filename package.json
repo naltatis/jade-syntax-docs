@@ -1,6 +1,6 @@
 {
   "name": "jade-syntax-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jade Syntax Documentation by example",
   "main": "Gruntfile.js",
   "devDependencies": {
