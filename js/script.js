@@ -23,7 +23,6 @@
       }
       input = $jade.val();
       try {
-        console.log(input);
         html = jade2html(input, data);
       } catch (error) {
         $jade.addClass("error");
