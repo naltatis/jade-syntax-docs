@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     cssmin: {
       compile: {
         files: {
-          "assets/global.min.css": ["css/bootstrap.css", "css/screen.css"]
+          "assets/global.min.css": ["assets/temp/bootstrap.needed.css", "css/screen.css"]
         }
       }
     },
@@ -63,6 +63,26 @@ module.exports = function(grunt) {
     watch: {
       files: ['js/server.coffee', 'css/*', 'index.jade'],
       tasks: 'compile'
+    },
+    uncss: {
+      dist: {
+        options: {
+          stylesheets: ['css/bootstrap.css']
+        },
+        files: {
+          'assets/temp/bootstrap.needed.css': ['index.html']
+        }
+      }
+    },
+    inline: {
+      main: {
+        options:{
+          tag: ''
+        },
+        files: {
+          src: ['index.html']
+        }
+      }
     }
   });
 
@@ -74,7 +94,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-inline');
 
   grunt.registerTask('default', ['compile', 'connect', 'watch']);
-  grunt.registerTask('compile', ['coffee', 'jade', 'stylus', 'uglify', 'cssmin', 'concat']);
+  grunt.registerTask('compile', ['coffee', 'jade', 'uncss', 'stylus', 'uglify', 'cssmin', 'concat', 'inline']);
 };
