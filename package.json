@@ -1,0 +1,33 @@
+{
+  "name": "jade-syntax-docs",
+  "version": "1.0.0",
+  "description": "Jade Syntax Documentation by example",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.5.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.1.3",
+    "grunt-contrib-connect": "^0.1.2",
+    "grunt-contrib-cssmin": "^0.4.1",
+    "grunt-contrib-jade": "^0.4.0",
+    "grunt-contrib-stylus": "^0.4.1",
+    "grunt-contrib-uglify": "^0.1.2",
+    "grunt-contrib-watch": "^0.3.1",
+    "nib": "^0.7.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naltatis/jade-syntax-docs.git"
+  },
+  "author": "naltatis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naltatis/jade-syntax-docs/issues"
+  },
+  "homepage": "https://github.com/naltatis/jade-syntax-docs"
+}
