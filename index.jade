@@ -136,7 +136,7 @@ html
         .row
           .span6
             textarea.size2.jade.
-              foo = "hello world"
+              - foo = "hello world"
               h1= foo
           .span6.right
             textarea.size2.html(readonly=true)
@@ -144,7 +144,7 @@ html
         .row
           .span6
             textarea.size2.jade.
-              foo = book.name + " world"
+              - foo = book.name + " world"
               h1= foo
             textarea.size1.json.
               {"book": {"name": "hello"}}
